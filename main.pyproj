@@ -1,0 +1,53 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f29b0ae6-9953-4e2a-ab74-668c3eea7a35</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>..\project_files\main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>main</Name>
+    <RootNamespace>register_build</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="package\misctools.py" />
+    <Compile Include="package\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main.py" />
+    <Compile Include="setup.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="package\" />
+    <Folder Include="shipments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="shipments\Shipment_1_Finnish_Biobank-1_DNA_samples.xlsx" />
+    <Content Include="shipments\Shipment_2_Kopio_Finnish Biobank_2_DNA_samples.xlsx" />
+    <Content Include="shipments\Shipment_3_Kopio_3363.001_datasheet.xlsx" />
+    <Content Include="shipments\Shipment_4_Listaus_210819.xlsx" />
+    <Content Include="shipments\shipment_5_Kopio_3363.003_Extraction_datasheet.xlsx" />
+    <Content Include="shipments\Shipment_6 kaikki_näytteiden_tiedot.xlsx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
